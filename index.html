@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+    <head>
+	<script src="js/jquery.min.js" charset="utf-8"></script>
+	<script src="js/jquery.simpleWeather.js" charset="utf-8"></script>
+	<script src="js/weather.js"></script>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather Application</title>
+	<link rel="stylesheet" href="css/foundation.css">
+    </head>
+    <body onload="getCurrWeather(); getFiveDay(); getLocation()">
+	<div class="row">
+	    <div class="small-12 columns" id="location" style="color: white">
+		<h1>Loading...</h1>
+	    </div>
+	    <div class="small-12 large-12 medium-12 columns end">
+		<div class="small-12 medium-6 large-3 columns">
+		    <a class="primary button" href="javascript:resetMainWeather()" style='width: 100%'>
+			<h5>Today</h5>
+		    </a>
+		</div>
+		<div class="small-12 medium-6 large-3 columns">
+		    <a class="secondary button" style='width: 100%' href="javascript:getFiveDay()">
+			<h5>5 Day</h5>
+		    </a>
+		</div>
+		<div class="small-12 medium-6 large-3 columns">
+		    <a class="secondary button" style='width: 100%' href="https://weather.com/weather/tenday/l/USMI0043:1:US">
+			<h5>10 Day</h5>
+		    </a>
+		</div>
+		<div class="small-12 medium-6 large-3 columns end">
+		    <a class="secondary button" style='width: 100%' href="https://weather.com/weather/weekend/l/USMI0043:1:US">
+			<h5>Weekend</h5>
+		    </a>
+		</div>
+	    </div>
+	    <div class="small-offset-3 medium-offset-0 small-6 medium-4 large-4 columns">
+		<div class="primary callout">
+		    <div  class="row">
+			<div class="small-12 columns">
+			    <h4 style="color:#ececec">Current Weather</h4>
+			</div>
+			<div id="weather" style="color:white">
+			    <p>Loading...</p>
+			</div>
+		    </div>
+		</div>
+		<div id="lastUpdate" style="color:white">
+		</div>
+	    </div>
+	    <div class="small-12 medium-8 large-8 columns end">
+		<div class="primary callout">
+		    <div class="row" id="mainWeather" style="color:white">
+			<p>Loading...</p>
+		    </div>
+		</div>
+	    </div>
+	</div>
+    </body>
+</html>
